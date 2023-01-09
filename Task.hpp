@@ -12,6 +12,7 @@ namespace Tasks {
  * Derived classes must implement the Run() function to define the behavior of the task.
  */
 
+
 class Task
 {
 public:
