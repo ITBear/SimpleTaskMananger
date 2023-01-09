@@ -6,9 +6,9 @@ TaskLambda::~TaskLambda (void) noexcept
 {
 }
 
-void	TaskLambda::Run (void)
+void    TaskLambda::Run (void)
 {
-	iFn();
+    iFn();
 }
 
 }//namespace Tasks

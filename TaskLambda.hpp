@@ -15,25 +15,25 @@ namespace Tasks {
 class TaskLambda final: public Task
 {
 public:
-	using SP	= std::shared_ptr<Task>;
-	using FnT	= std::function<void()>;
+    using SP    = std::shared_ptr<Task>;
+    using FnT   = std::function<void()>;
 
 public:
-					TaskLambda	(void) noexcept = delete;
-					TaskLambda	(const TaskLambda&) noexcept = delete;
-					TaskLambda	(TaskLambda&&) noexcept = delete;
+                    TaskLambda  (void) noexcept = delete;
+                    TaskLambda  (const TaskLambda&) noexcept = delete;
+                    TaskLambda  (TaskLambda&&) noexcept = delete;
 
-	/**
-	 * @brief TaskLambda - constructor
-	 * @param aFnT - lambda function
-	 */
-	inline			TaskLambda	(FnT aFnT) noexcept;
-	virtual			~TaskLambda	(void) noexcept override final;
+    /**
+     * @brief TaskLambda - constructor
+     * @param aFnT - lambda function
+     */
+    inline          TaskLambda  (FnT aFnT) noexcept;
+    virtual         ~TaskLambda (void) noexcept override final;
 
-	virtual void	Run			(void) override final;
+    virtual void    Run         (void) override final;
 
 private:
-	FnT				iFn;
+    FnT             iFn;
 };
 
 TaskLambda::TaskLambda (FnT aFnT) noexcept:
