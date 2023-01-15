@@ -131,7 +131,7 @@ void    TaskManager::WakeupIdle (void)
 #endif
     }
 
-    if (id != iExecutors.size())
+    if (id < iExecutors.size())
     {
         iExecutors.at(id)->Wakeup();
     }
